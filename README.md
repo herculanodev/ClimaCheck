@@ -1,6 +1,6 @@
-# ClimaCheck - Aplicativo de Previsão do Tempo
+# WaeCast - Aplicativo de Previsão do Tempo
 
-O ClimaCheck é um aplicativo de previsão do tempo que utiliza a arquitetura MVC e segue a metodologia ágil de desenvolvimento Kanban para fornecer informações detalhadas sobre o clima e manter os usuários informados sobre as condições climáticas atuais e futuras.
+O WaeCast é um aplicativo de previsão do tempo que utiliza a arquitetura MVC e segue a metodologia ágil de desenvolvimento Kanban para fornecer informações detalhadas sobre o clima e manter os usuários informados sobre as condições climáticas atuais e futuras.
 
 ## Recursos Principais
 
@@ -14,7 +14,7 @@ O ClimaCheck é um aplicativo de previsão do tempo que utiliza a arquitetura MV
 
 ## Arquitetura MVC
 
-O ClimaCheck segue a arquitetura MVC (Model-View-Controller) para manter uma estrutura organizada e modular do código-fonte:
+O WaeCast segue a arquitetura MVC (Model-View-Controller) para manter uma estrutura organizada e modular do código-fonte:
 
 - **Model:** Responsável pela lógica de negócios e manipulação de dados meteorológicos.
 
@@ -24,7 +24,7 @@ O ClimaCheck segue a arquitetura MVC (Model-View-Controller) para manter uma est
 
 ## Metodologia Ágil Kanban
 
-O desenvolvimento do ClimaCheck adota a metodologia ágil Kanban, que se concentra na visualização do progresso e na priorização contínua de tarefas. Nossa abordagem Kanban inclui:
+O desenvolvimento do WaeCast adota a metodologia ágil Kanban, que se concentra na visualização do progresso e na priorização contínua de tarefas. Nossa abordagem Kanban inclui:
 
 - **Quadro Kanban:** Utilizamos um quadro Kanban virtual para rastrear e organizar as tarefas em andamento, de "A fazer" a "Concluído".
 
@@ -44,7 +44,7 @@ O desenvolvimento do ClimaCheck adota a metodologia ágil Kanban, que se concent
 
 ## Uso
 
-1. Abra o aplicativo ClimaCheck.
+1. Abra o aplicativo WaeCast.
 
 2. Permita o acesso à sua localização para obter previsões precisas do tempo para a sua área.
 
@@ -75,4 +75,4 @@ Este projeto é licenciado sob a Licença MIT - consulte o arquivo [LICENSE](LIC
 - Se você tiver alguma pergunta ou sugestão, entre em contato conosco em (equipe@climacheck.com).
 
 
-Obrigado por usar o ClimaCheck!
+Obrigado por usar o WaeCast!
