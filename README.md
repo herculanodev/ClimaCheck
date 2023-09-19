@@ -2,6 +2,8 @@
 
 O WaeCast é um aplicativo de previsão do tempo que utiliza a arquitetura MVC e segue a metodologia ágil de desenvolvimento Kanban para fornecer informações detalhadas sobre o clima e manter os usuários informados sobre as condições climáticas atuais e futuras.
 
+https://www.figma.com/file/YI3dh6UczLBgonXkrDELXs/WeaCast?type=design&node-id=0-1&mode=design&t=mS2D3HTLKnzqI59r-0
+
 ## Recursos Principais
 
 - **Previsão do Tempo:** Obtenha previsões precisas do tempo para sua localização atual ou qualquer outra cidade do mundo.
