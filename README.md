@@ -1,7 +1,24 @@
 # WaeCast - Aplicativo de Previsão do Tempo
 
-O WaeCast é um aplicativo de previsão do tempo que utiliza a arquitetura MVC e segue a metodologia ágil de desenvolvimento Kanban para fornecer informações detalhadas sobre o clima e manter os usuários informados sobre as condições climáticas atuais e futuras.
+O WeaCast é um aplicativo de previsão do tempo que oferece uma experiência abrangente e personalizada para manter os usuários sempre informados sobre as condições climáticas. Com uma interface intuitiva e recursos avançados, o WeaCast se destaca da concorrência.
 
+Principais funcionalidades do WeaCast:
+
+Previsões Precisas: O aplicativo utiliza fontes confiáveis de dados meteorológicos para fornecer previsões precisas e atualizadas para sua localização atual ou qualquer lugar do mundo.
+
+Previsão de Curto Prazo: Além da previsão de longo prazo, o WeaCast oferece detalhes sobre o clima nas próximas horas, permitindo que os usuários se preparem para mudanças súbitas.
+
+Mapas Interativos: Os mapas interativos oferecem uma visão detalhada das condições climáticas, incluindo temperatura, umidade, velocidade do vento e precipitação em tempo real. Os usuários podem ampliar e mover os mapas para obter informações específicas.
+
+Alertas Meteorológicos: Receba alertas personalizados para eventos climáticos severos, como tempestades, furacões, nevascas e muito mais, ajudando a manter sua segurança.
+
+Personalização: O WeaCast permite que os usuários personalizem sua experiência climática, adicionando cidades favoritas, definindo unidades de medida preferidas e escolhendo o tipo de informação que desejam ver.
+
+Widgets: Integre widgets de previsão do tempo à tela inicial do seu dispositivo para obter informações rápidas e diretas sobre as condições climáticas sem a necessidade de abrir o aplicativo.
+
+Histórico do Tempo: Acesse informações sobre o histórico do tempo para entender tendências climáticas sazonais e comparar condições climáticas ao longo do tempo.
+
+O WeaCast se destaca pela sua precisão, design amigável e foco na personalização, tornando-o uma ferramenta essencial para quem deseja se manter informado sobre o clima de maneira conveniente e confiável. Este aplicativo é uma escolha ideal tanto para planejamento diário quanto para preparação para eventos climáticos extremos
 
 
 ## Recursos Principais
@@ -75,6 +92,9 @@ Este projeto é licenciado sob a Licença MIT - consulte o arquivo [LICENSE](LIC
 ## Contato
 
 - Se você tiver alguma pergunta ou sugestão, entre em contato conosco em (equipe@climacheck.com).
+
+  Prototype:
+  https://www.figma.com/file/YI3dh6UczLBgonXkrDELXs/WeaCast?type=design&node-id=0-1&mode=design&t=UNobKaHfa4SHadZN-0
 
 
 Obrigado por usar o WaeCast!
