@@ -23,7 +23,7 @@ export default function LoginScreen() {
       <View style={styles.logoContainer}>
         {/* Logo */}
         <Image
-          source={require('./assets/imagem.png')}
+          source={require('../assets/imagem.png')}
           style={styles.logo}
         />
         
@@ -64,7 +64,7 @@ export default function LoginScreen() {
       {/* Botão de Login com o Google */}
       <TouchableOpacity style={[styles.googleButton, styles.marginBottom]} onPress={handleGoogleLogin}>
         <Image
-          source={require('./assets/google-icon.png')} // Caminho para o ícone do Google
+          source={require('../assets/google-icon.png')} // Caminho para o ícone do Google
           style={styles.googleIcon}
         />
         <Text style={styles.googleButtonText}>Google</Text>

@@ -3,7 +3,7 @@ import { View, Text, TextInput, Button, FlatList, TouchableOpacity, StyleSheet }
 import { Appbar } from 'react-native-paper';
 import VoltarBtn from '../components/VoltarBtn'; // Importe o seu VoltarBtn
 
-function CityManagementScreen() {
+function PesquisarCidade() {
   const [cities, setCities] = useState([]);
   const [newCity, setNewCity] = useState('');
 
@@ -100,4 +100,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default CityManagementScreen;
+export default PesquisarCidade;

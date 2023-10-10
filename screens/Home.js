@@ -1,6 +1,7 @@
 import React from 'react';
 import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
 import { Appbar } from 'react-native-paper';
+import DrawerNavigation from '../routes/Drawer' 
 
 function HomeScreen({ navigation }) {
   // Supondo que você tenha a cidade e a temperatura como variáveis
@@ -9,7 +10,7 @@ function HomeScreen({ navigation }) {
 
   const openMenu = () => {
     // Use o método openDrawer() para abrir o menu lateral
-    navigation.openDrawer();
+    navigation.DrawerNavigatoin();
   };
 
   return (
