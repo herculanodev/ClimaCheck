@@ -1,5 +1,6 @@
 import React from 'react';
 import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
+import VoltarBtn from '../components/VoltarBtn'; // Importe o componente VoltarBtn
 
 const LogoutScreen = ({ navigation }) => {
   const handleLogout = () => {
@@ -15,7 +16,10 @@ const LogoutScreen = ({ navigation }) => {
 
   return (
     <View style={styles.container}>
-      <Text style={styles.text}>Deseja mesmo sair da sua conta?</Text>
+      <View style={styles.header}>
+        <VoltarBtn navigation={navigation} /> {/* Adicione o componente VoltarBtn aqui */}
+      </View>
+      <Text style={styles.headerTitle}>Deseja mesmo sair da sua conta?</Text>
       <View style={styles.buttonContainer}>
         <TouchableOpacity
           style={[styles.button, styles.cancelButton]}
@@ -36,17 +40,22 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: 'black',
-    justifyContent: 'center', // Centraliza verticalmente
-    alignItems: 'center', // Centraliza horizontalmente
     paddingBottom: 50, // Espaçamento inferior para os botões
   },
-  text: {
-    fontSize: 36,
-    color: 'white',
-    marginBottom: 30,
-    paddingVertical: 20, // Adicione espaço vertical adicional
+  header: {
+    flexDirection: 'row', // Disposição horizontal
+    alignItems: 'center', // Centraliza verticalmente
+    backgroundColor: 'black', // Cor de fundo do cabeçalho
+    padding: 16,
+  },
+  headerTitle: {
+    fontSize: 24,
+    color: 'orange', // Alterado para laranja
+    textAlign: 'center', // Centraliza horizontalmente
+    marginTop: 20, // Espaçamento superior
   },
   buttonContainer: {
+    alignItems: 'center', // Centraliza horizontalmente
     marginTop: 50, // Adicione um espaçamento superior para os botões
   },
   button: {
