@@ -1,12 +1,10 @@
 import React, { useState } from 'react';
-
 import { View, Text, TextInput, Button, StyleSheet } from 'react-native';
-
 import { Appbar } from 'react-native-paper';
+import VoltarBtn from '../components/VoltarBtn'; // Importe o componente VoltarBtn
 
 function ForgotPassword({ navigation }) {
   const [email, setEmail] = useState('');
-
   const [confirmEmail, setConfirmEmail] = useState('');
 
   const handleConfirm = () => {
@@ -17,16 +15,10 @@ function ForgotPassword({ navigation }) {
 
   return (
     <View style={styles.container}>
-      <Appbar.Header style={styles.header}>
-        <Appbar.Action
-          icon="arrow-left"
-          onPress={() => navigation.goBack()}
-          accessibilityLabel="Voltar"
-          accessibilityRole="button"
-          accessibilityHint="Voltar para a tela anterior">
-          <Text style={{ color: 'white', marginLeft: 4 }}>Voltar</Text>
-        </Appbar.Action>
+      {/* Substitua a Appbar padrão pelo componente VoltarBtn */}
+      <VoltarBtn navigation={navigation} />
 
+      <Appbar.Header style={styles.header}>
         <Appbar.Content title="Esqueci Minha Senha" />
       </Appbar.Header>
 
@@ -64,27 +56,23 @@ function ForgotPassword({ navigation }) {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-
     padding: 16,
-
     backgroundColor: 'black', // Fundo laranja
   },
-
   header: {
     backgroundColor: 'black', // Cabeçalho preto
   },
-
   input: {
-    borderBottomWidth: 10,
-
-    marginBottom: 16,
-
-    backgroundColor: '#FDBF75', // Fundo dos campos de entrada branco
+    backgroundColor: '#FDBF75',
+    marginBottom: 30,
+    padding: 10,
+    borderRadius: 10,
+    width: '100%',
   },
-
   confirmButton: {
     backgroundColor: '', // Fundo preto para o botão de confirmar
   },
 });
 
 export default ForgotPassword;
+
