@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { View, Text, TextInput, Button, FlatList, TouchableOpacity, StyleSheet } from 'react-native';
 import { Appbar } from 'react-native-paper';
+import VoltarBtn from '../components/VoltarBtn'; // Importe o seu VoltarBtn
 
 function CityManagementScreen() {
   const [cities, setCities] = useState([]);
@@ -21,12 +22,7 @@ function CityManagementScreen() {
   return (
     <View style={styles.container}>
       <Appbar.Header style={styles.header}>
-        <Appbar.Action
-          icon="menu"
-          onPress={() => {
-            // Adicione a lógica para abrir o menu aqui
-          }}
-        />
+        <VoltarBtn /> {/* Substitua as três barras pelo VoltarBtn */}
         <Appbar.Content title="Gerenciamento de Cidades" />
       </Appbar.Header>
 
@@ -37,9 +33,9 @@ function CityManagementScreen() {
         style={styles.input}
       />
 
-      <TouchableOpacity // Alterado de Button para TouchableOpacity
+      <TouchableOpacity
         onPress={addCity}
-        style={styles.addButton} // Estilo semelhante ao botão de Registration
+        style={styles.addButton}
       >
         <Text style={styles.buttonText}>Adicionar Cidade</Text>
       </TouchableOpacity>
@@ -63,12 +59,12 @@ function CityManagementScreen() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: 'black', // Fundo preto
+    backgroundColor: 'black',
     paddingHorizontal: 16,
     paddingTop: 32,
   },
   header: {
-    backgroundColor: 'black', // Cabeçalho preto
+    backgroundColor: 'black',
   },
   input: {
     borderWidth: 1,
@@ -76,23 +72,23 @@ const styles = StyleSheet.create({
     borderRadius: 8,
     padding: 8,
     marginBottom: 16,
-    backgroundColor: '#FDBF75', // Fundo dos campos de entrada branco
-    color: 'black', // Texto em preto
+    backgroundColor: '#FDBF75',
+    color: 'black',
   },
   addButton: {
-    backgroundColor: '#759EFF', // Cor de fundo do botão
+    backgroundColor: '#759EFF',
     borderRadius: 8,
     alignItems: 'center',
     justifyContent: 'center',
     paddingVertical: 12,
   },
   buttonText: {
-    color: 'white', // Texto em branco
+    color: 'white',
     fontSize: 16,
     fontWeight: 'bold',
   },
   cityItem: {
-    backgroundColor: '#FDBF75', // Cor de fundo dos boxes de previsão
+    backgroundColor: '#FDBF75',
     padding: 16,
     borderRadius: 8,
     marginBottom: 8,
