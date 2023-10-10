@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { View, Text, TouchableOpacity, TextInput, StyleSheet, ScrollView } from 'react-native';
+import VoltarBtn from '../components/VoltarBtn';
 
 const CityListScreen = () => {
   const [cities, setCities] = useState([
@@ -13,6 +14,7 @@ const CityListScreen = () => {
   ]);
   const [searchText, setSearchText] = useState('');
   const [displayedCities, setDisplayedCities] = useState(cities);
+  const [newCity, setNewCity] = useState(''); // Estado para a nova cidade a ser adicionada
 
   const removeCity = (cityId) => {
     const updatedCities = cities.filter((city) => city.id !== cityId);
@@ -28,11 +30,26 @@ const CityListScreen = () => {
   };
 
   const addCity = () => {
-    // Adicione aqui a lógica para adicionar uma nova cidade
+    if (newCity.trim() !== '') {
+      // Gere um novo ID para a cidade (apenas um exemplo, você pode usar outra abordagem)
+      const newCityId = cities.length + 1;
+
+      // Crie um objeto para representar a nova cidade
+      const newCityObject = { id: newCityId, name: newCity };
+
+      // Atualize a lista de cidades
+      const updatedCities = [...cities, newCityObject];
+      setCities(updatedCities);
+      setDisplayedCities(updatedCities);
+
+      // Limpe o campo de entrada da nova cidade
+      setNewCity('');
+    }
   };
 
   return (
     <View style={styles.container}>
+      <VoltarBtn />
       <View style={styles.header}>
         <Text style={styles.headerTitle}>Cidades Adicionadas</Text>
       </View>
@@ -46,7 +63,7 @@ const CityListScreen = () => {
         />
         <View style={styles.centerSearchButton}>
           <TouchableOpacity
-            style={[styles.searchButton, { marginBottom: 20 }]} // Adicione uma margem inferior ao botão
+            style={[styles.searchButton, { marginBottom: 20 }]}
             onPress={handleSearch}>
             <Text style={styles.searchButtonText}>Pesquisar</Text>
           </TouchableOpacity>
@@ -65,6 +82,13 @@ const CityListScreen = () => {
               </TouchableOpacity>
             </View>
           ))}
+          <TextInput
+            style={styles.input}
+            placeholder="Nome da nova cidade"
+            value={newCity}
+            onChangeText={(text) => setNewCity(text)}
+            backgroundColor="white"
+          />
           <TouchableOpacity
             style={styles.addButton}
             onPress={addCity}>
@@ -75,14 +99,13 @@ const CityListScreen = () => {
     </View>
   );
 };
-
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: 'blue',
+    backgroundColor: '#76C7FF',
   },
   header: {
-    backgroundColor: 'orange',
+    backgroundColor: '#FDBF75',
     padding: 16,
     alignItems: 'center',
   },
@@ -97,6 +120,7 @@ const styles = StyleSheet.create({
   },
   input: {
     height: 40,
+    backgroundColor: '#FDBF75',
     borderColor: 'gray',
     borderWidth: 1,
     borderRadius: 8,
@@ -104,7 +128,7 @@ const styles = StyleSheet.create({
     paddingHorizontal: 8,
   },
   searchButton: {
-    backgroundColor: 'black',
+    backgroundColor: '#FDBF75',
     borderRadius: 8,
     paddingVertical: 8,
     paddingHorizontal: 80,
@@ -130,7 +154,7 @@ const styles = StyleSheet.create({
     fontSize: 16,
   },
   removeButton: {
-    backgroundColor: 'blue',
+    backgroundColor: '#FDBF75',
     borderRadius: 999,
     paddingVertical: 5,
     paddingHorizontal: 8,
@@ -143,7 +167,7 @@ const styles = StyleSheet.create({
     padding: 14,
   },
   addButton: {
-    backgroundColor: 'blue',
+    backgroundColor: '#759EFF',
     borderRadius: 999,
     paddingVertical: 5,
     paddingHorizontal: 30,
@@ -161,3 +185,4 @@ const styles = StyleSheet.create({
 });
 
 export default CityListScreen;
+
