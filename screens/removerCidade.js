@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { View, Text, TouchableOpacity, TextInput, StyleSheet, ScrollView } from 'react-native';
+import VoltarBtn from '../components/VoltarBtn'
 
 const CityListScreen = () => {
   const [cities, setCities] = useState([
@@ -33,9 +34,12 @@ const CityListScreen = () => {
 
   return (
     <View style={styles.container}>
+      
       <View style={styles.header}>
+        < VoltarBtn />
         <Text style={styles.headerTitle}>Cidades Adicionadas</Text>
       </View>
+      
       <ScrollView contentContainerStyle={styles.content}>
         <TextInput
           style={[styles.input, { marginTop: 50 }]}
@@ -79,17 +83,18 @@ const CityListScreen = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: 'blue',
+    backgroundColor: '#759EFF',
   },
   header: {
-    backgroundColor: 'orange',
+    backgroundColor: '#FDBF75',
     padding: 16,
-    alignItems: 'center',
+    
   },
   headerTitle: {
     fontSize: 20,
     fontWeight: 'bold',
     color: 'white',
+    textAlign: 'center'
   },
   content: {
     flexGrow: 1,
@@ -102,9 +107,10 @@ const styles = StyleSheet.create({
     borderRadius: 8,
     marginBottom: 9,
     paddingHorizontal: 8,
+    backgroundColor: '#FFFFFF',
   },
   searchButton: {
-    backgroundColor: 'black',
+    backgroundColor: '#FDBF75',
     borderRadius: 8,
     paddingVertical: 8,
     paddingHorizontal: 80,
@@ -130,7 +136,7 @@ const styles = StyleSheet.create({
     fontSize: 16,
   },
   removeButton: {
-    backgroundColor: 'blue',
+    backgroundColor: '#FDBF75',
     borderRadius: 999,
     paddingVertical: 5,
     paddingHorizontal: 8,
@@ -143,7 +149,7 @@ const styles = StyleSheet.create({
     padding: 14,
   },
   addButton: {
-    backgroundColor: 'blue',
+    backgroundColor: '#759EFF',
     borderRadius: 999,
     paddingVertical: 5,
     paddingHorizontal: 30,
