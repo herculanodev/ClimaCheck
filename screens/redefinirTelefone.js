@@ -1,108 +1,64 @@
-import React from 'react';
-import { View, Text, TextInput, TouchableOpacity, StyleSheet } from 'react-native';
+import React, { useState } from 'react';
+import { View, TouchableOpacity, Text, StyleSheet, TextInput } from 'react-native';
+import VoltarBtn from '../components/VoltarBtn';
 
-const RedefinirTelefoneScreen = ({ navigation }) => {
+function RedefinirTelefone() {
+  const [newPhoneNumber, setNewPhoneNumber] = useState('');
+
   const handleConfirm = () => {
-    // Adicione aqui a lógica para confirmar a redefinição de telefone
-    // Você pode implementar a lógica de acordo com as necessidades do seu aplicativo.
-  };
-
-  const handleCancel = () => {
-    // Adicione aqui a lógica para cancelar a operação e voltar para a tela anterior, se necessário.
-    navigation.goBack();
+    // Adicione aqui a lógica para confirmar o novo número de telefone
+    // Por exemplo, enviar um código de verificação para o novo número
+    // e redirecionar para a próxima etapa.
   };
 
   return (
     <View style={styles.container}>
-      <View style={styles.header}>
-        <Text style={styles.text}>Alterar Telefone</Text>
-      </View>
-      <View style={styles.content}>
-        <TextInput
-          style={[styles.input, styles.inputBackground]}
-          placeholder="Digite seu novo número de telefone"
-          keyboardType="numeric"
-        />
-        <View style={styles.buttonContainer}>
-          <TouchableOpacity
-            style={[styles.button, styles.cancelButton]}
-            onPress={handleCancel}>
-            <Text style={[styles.buttonText, styles.whiteText]}>Cancelar</Text>
-          </TouchableOpacity>
-          <TouchableOpacity
-            style={[styles.button, styles.confirmButton]}
-            onPress={handleConfirm}>
-            <Text style={[styles.buttonText, styles.redText]}>Confirmar</Text>
-          </TouchableOpacity>
-        </View>
-      </View>
+      <VoltarBtn />
+      <Text style={styles.title}>Redefinir Telefone</Text>
+
+      <TextInput
+        style={styles.input}
+        placeholder="Novo Número de Telefone"
+        keyboardType="phone-pad"
+        value={newPhoneNumber}
+        onChangeText={(text) => setNewPhoneNumber(text)}
+      />
+
+      <TouchableOpacity style={styles.btn} onPress={handleConfirm}>
+        Confirmar
+      </TouchableOpacity>
     </View>
   );
-};
+}
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: 'black',
-    justifyContent: 'center',
-    alignItems: 'center',
+    backgroundColor: '#0D0D0D',
+    padding: 20,
   },
-  header: {
-    position: 'absolute', // Posicionamento absoluto
-    top: 0, // Alinhe o topo do elemento com o topo do pai
-    width: '100%', // Largura total
-    backgroundColor: 'black',
-    alignItems: 'center',
-  },
-  text: {
+  title: {
+    color: 'orange',
     fontSize: 36,
-    color: 'white',
-    marginBottom: 20, // Espaçamento inferior para afastar o texto do topo
-    marginTop: 80, // Espaçamento superior
-  },
-  content: {
-    alignItems: 'center', // Centraliza o conteúdo verticalmente
+    marginTop: 20,
+    marginBottom: 40,
+    textAlign: 'center',
   },
   input: {
-    width: 300,
-    height: 40,
-    borderColor: 'gray',
-    borderWidth: 1,
-    borderRadius: 8,
-    marginBottom: 20,
-    paddingHorizontal: 8,
+    backgroundColor: '#FDBF75',
+    marginBottom: 30,
+    padding: 10,
+    borderRadius: 10,
+    width: '100%',
+  },
+  btn: {
+    backgroundColor: '#759EFF', // Cor do botão de confirmação
     color: 'white',
-  },
-  inputBackground: {
-    backgroundColor: 'orange', // Background laranja
-  },
-  buttonContainer: {
-    marginTop: 50,
-  },
-  button: {
-    borderRadius: 8,
-    paddingVertical: 8,
-    paddingHorizontal: 30,
-    marginBottom: 10,
-    width: 200,
+    padding: 20,
     alignItems: 'center',
-  },
-  cancelButton: {
-    backgroundColor: 'transparent',
-  },
-  confirmButton: {
-    backgroundColor: 'transparent',
-    borderWidth: 2,
-  },
-  buttonText: {
-    fontWeight: 'bold',
-  },
-  whiteText: {
-    color: 'white',
-  },
-  redText: {
-    color: 'red',
+    justifyContent: 'center',
+    borderRadius: 10,
   },
 });
 
-export default RedefinirTelefoneScreen;
+export default RedefinirTelefone;
