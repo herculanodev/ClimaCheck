@@ -1,6 +1,7 @@
 import React from 'react';
 import { View, Text, StyleSheet, ScrollView } from 'react-native';
 import { Appbar } from 'react-native-paper';
+import VoltarBtn from '../components/VoltarBtn'; // Importe o seu VoltarBtn
 
 function DailyForecastScreen({ navigation }) {
   // Supondo que você tenha informações de previsão diária
@@ -19,12 +20,7 @@ function DailyForecastScreen({ navigation }) {
   return (
     <View style={styles.container}>
       <Appbar.Header style={styles.header}>
-        <Appbar.Action
-          icon="menu"
-          onPress={() => {
-            // Adicione a lógica para abrir o menu aqui
-          }}
-        />
+        <VoltarBtn /> {/* Substitua as três barras pelo VoltarBtn */}
         <Appbar.Content title="Previsão Diária" />
       </Appbar.Header>
 
@@ -60,7 +56,7 @@ const styles = StyleSheet.create({
     paddingTop: 32,
   },
   header: {
-    backgroundColor: 'black',
+    backgroundColor: 'orange',
   },
   today: {
     fontSize: 24,
@@ -110,3 +106,4 @@ const styles = StyleSheet.create({
 });
 
 export default DailyForecastScreen;
+
